@@ -1,2 +1,2 @@
-s={}
-print(type(s))  # Output: <class 'dict'>
+a={'name':'sharan','age':24,'place':'kerala'}
+print(type(a))

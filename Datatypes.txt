@@ -283,12 +283,255 @@ when our requirement is to stoire data where
 -order is not expected
 -dupicate not allowed 
 -slicing and ic=ndexing not alowed 
--can add heterogenous objects
+-can add heterogenousls objects
 -it is mutable in nature? Growable in nature.
 to add values we add() method where we used append() method in list datatype
  a={1,2,3,4}
 a.add(5)
 print(a) = o/p== {1,2,3,4,5}
 
+Features of Set Datatype in Python
+1. Unordered Collection
 
+A set does not preserve the order of elements.
+
+Elements may appear in any order when you print the set.
+
+2. Stores Only Unique Elements
+
+Sets automatically remove duplicates.
+
+s = {1, 2, 2, 3}
+print(s)   # Output: {1, 2, 3}
+
+3. Mutable
+
+You can add or remove elements using add(), remove(), discard(), etc.
+
+But elements inside a set must be immutable (e.g., no lists).
+
+4. No Indexing or Slicing
+
+You cannot access elements by index like lists or strings.
+
+s[0]   # ❌ Error
+
+5. Supports Mathematical Set Operations
+
+Sets support fast and efficient set theory operations:
+
+Operation	Method	Meaning
+Union	`set1	set2orset1.union(set2)`
+Intersection	set1 & set2	Common elements
+Difference	set1 - set2	Elements in set1 not in set2
+Symmetric Difference	set1 ^ set2	Elements not common
+6. Dynamic Size
+
+Size of a set grows or shrinks automatically when elements are added or removed.
+
+7. Highly Efficient (Uses Hashing)
+
+Set operations like membership checking (in) are very fast.
+
+10 in myset   # Fast lookup
+
+8. Can Be Created Using Curly Braces or set()
+s = {1, 2, 3}
+s2 = set([1, 2, 3])
+
+9. Supports Iteration
+
+You can loop through set elements:
+
+for i in s:
+    print(i)
+
+10. Frozen Sets (Immutable Version)
+
+Python also provides frozenset, a version of set that cannot be changed.
+
+
+frozen set:
+===========
+prozenset datatype in python is almost is same as set data type but it is immutable in nature
+
+As name represents the set is frozen means if values assigned in set then cannot be changed later.
+
+Syntax:- a = {1,2,3,4,5,6}
+f=frozenset(a)
+
+
+range
+=======
+range datatype in pythin is used when we want to fill values in a given range.
+Ex: want some values in tange of 1 to 1 then w us range datatype
+a=range(10)
+gives o/p as : 0,1,2,3,4,5,6,7,8,9
+
+
+It starts with 0 and goes to n-1
+
+There are three fortas to represent range:
+
+Format 1
+=======
+range(10)
+range(1,10)/range(3,59) etc
+range(start, end, increment /decrement)
+
+Features:
+--immutable
+--slicing and indexing is possible
+--order is preserved
+
+
+dict
+=====
+to represent values as key value.
+Ex:a = {'name': 'sharan', 'roll_no': '1'}
+print(type(a))
+
+Features:
+. Stores Data as Key–Value Pairs
+.Keys Must Be Unique
+. Mutable (Can Be Modified)
+Unordered / Preserves Insertion Order (Python 3.7+)
+Keys Must Be Immutable
+Values Can Be Any Datatype
+
+
+1. Immutable Sequence of Bytes
+
+Once created, you cannot modify it.
+
+b = bytes([10, 20, 30])
+
+2. Stores Values from 0 to 255
+
+Every element must be an integer between 0–255.
+
+3. Ordered Sequence
+
+Supports indexing, slicing, and iteration.
+
+print(b[0])   # → 10
+
+4. Used in Binary Data Handling
+
+Commonly used for:
+
+files (binary mode)
+
+network data
+
+images, audio, video processing
+
+5. Can Be Created from Lists or Strings
+b1 = bytes([1, 2, 3])
+b2 = "hello".encode()
+
+Features of bytearray Datatype in Python
+1. Mutable Sequence of Bytes
+
+You can change, add, or delete elements.
+
+ba = bytearray([10, 20, 30])
+ba[0] = 99
+
+2. Stores Values 0 to 255
+
+Same limit as bytes.
+
+3. Ordered Sequence
+
+Supports indexing, slicing, iteration, appending, etc.
+
+4. Useful for Editable Binary Data
+
+Preferred when you need to modify binary data:
+
+editing file contents
+
+network packets
+
+image/audio/byte-level processing
+
+5. Supports Many Methods
+
+append()
+
+extend()
+
+insert()
+
+pop()
+
+reverse()
+
+Difference (Quick Comparison)
+Feature	bytes	bytearray
+Mutability	Immutable	Mutable
+Methods	Limited	Many modifying methods
+Use case	Read-only binary data	Editable binary data
+Creation	bytes([list])	bytearray([list])
+
+NoneType in Python
+1. What is NoneType?
+
+NoneType is the datatype of the value None.
+
+None represents absence of value, null, or nothing.
+
+a = None
+print(type(a))   # <class 'NoneType'>
+
+Key Features of NoneType
+1. Only One Value → None
+
+NoneType has only one possible value, which is None.
+
+2. Used to Represent “No Value”
+
+Used when a variable or function has no meaningful value.
+
+def test():
+    pass
+
+print(test())   # Output: None
+
+3. Immutable
+
+None cannot be changed or modified.
+
+4. Used as Default Return Type
+
+If a function does not explicitly return a value, Python returns None by default.
+
+5. Used for Optional Variables or Placeholders
+
+Commonly used to initialize variables before assigning actual values.
+
+data = None
+
+6. Used for Comparisons
+
+To check if something is None, always use:
+
+if x is None:
+    ...
+
+
+Not:
+
+if x == None:  # Not recommended
+
+7. Boolean Behavior
+
+None is treated as False in boolean contexts:
+
+if None:
+    print("Hello")  # Will not run
+
+
+    
 
