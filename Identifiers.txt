@@ -1,0 +1,53 @@
+Identifers
+==========
+
+Identifers in python means the name given to anything to be identified. Ex:- variables, functions, classes, modules and other objects.
+
+Rules for identifiers,
+
+--Can contain:
+
+    Letters (A–Z, a–z)
+
+    Digits (0–9)
+
+    Underscore (_)
+
+    Example: user_name, age2, _count
+
+--Cannot start with a digit
+
+    ❌ 2value → invalid
+
+    ✅ value2 → valid
+
+--Cannot contain spaces or special characters
+
+    ❌ user name, my-value, total$
+
+    ✅ user_name, myValue
+
+--Case-sensitive
+
+    Name, name, and NAME are different identifiers.
+
+--Cannot use Python keywords
+
+    Keywords like if, else, for, class, def, etc. cannot be used as identifiers.
+
+
+
+
+Keywords:
+===========
+
+Keywords in python means, words that have soem specific and pre-defined meaning and cannot be used as identifiers.
+- Python have 33 keywords.
+- viz
+    True, False, None
+    and or not is
+    if elif else
+    while for break continue yield return in
+    try except finally rasie assert
+    import from as class def pass 
+    global nonlocal lamda del with

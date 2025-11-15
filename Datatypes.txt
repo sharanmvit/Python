@@ -1,0 +1,294 @@
+Data types: -
+ ============================
+
+ Means, the type of data used or stored in a variable is called a data type.
+
+Datatypes in python are:
+
+    int float complex
+    str 
+    bool
+    list tuple range 
+    dict
+    set frozenset 
+    bytes bytesarray memoryview 
+    NoneType
+
+int
+====
+
+int is a Datatype in python which is used to represent whole numbers. (Intergral numbers)
+
+This is represented by 4 methods:
+1. Decimal (Base 10)
+2. Binary (Base 2)
+3. Octal (Base 8)
+4. Hexadecimal (Base 16)  
+
+# Example of int datatype
+a = 10          # Decimal
+b = 0b1010     # Binary
+c = 0o12       # Octal
+d = 0xA        # Hexadecimal        
+
+base conversion
+================
+We can convert one base to another base value using the following methods
+bin() - converts any base to binary
+oct() - converts any base to octal
+hex() - converts any base to hexadecimal
+int() - converts any base to decimal
+# Example of base conversion
+a = 10
+print(bin(a))   # Output: 0b1010
+print(oct(a))   # Output: 0o12
+print(hex(a))   # Output: 0xA
+
+
+
+float
+=====
+float is a Datatype in python whihc have decimal points. 
+
+-> in float values, the other representtion is no t allowed like binary, ocatl and hexcadecimal. 
+
+Ex:- 10.2, 987.46,  etc
+# Example of float datatype
+a = 10.5
+b = -3.14
+c = 0.0
+d = 2.5e3   # 2.5 * 10^3    
+
+complex
+=======
+complex is a Datatype in python which is used to represent complex numbers.     
+A complex number is represented as a + bj, where a is the real part and b is the imaginary part.    
+
+# Example of complex datatype
+a = 2 + 3j
+b = 4 - 5j
+c = complex(1, 2)   # 1 is the real part and 2 is the imaginary part    
+d = complex(3)      # 3 is the real part and 0 is the imaginary part
+e = complex()       # 0 + 0j
+# Accessing real and imaginary parts
+real_part = a.real   # Output: 2.0
+imaginary_part = a.imag  # Output: 3.0  
+
+bool
+====
+bool is a Datay type in python which is used to represent the boolean values.
+
+viz, True nad False.
+
+Ex:- a=10
+b=20
+
+c=a>b
+type(a)
+O/p- False
+ c=a<b
+ type(b)
+ o/P- True
+
+Note:- Internally True means 1 and False means 0 in bool datatype.4
+means, True + True = 2
+True - False = 1
+False * False = 0 etc
+
+String Datatype
+===================
+String (str) is a datatype in python is used to represent a char or set of charecters.
+Ex:- "hello", 'movue', etc
+
+--> Both single and double quotes are used tpo represent string datatype.4
+--> We can also use truple quotes to represent multi-line strings in python.
+Ex:- '''hello
+      welcome to python
+      programming'''
+
+# Example of string datatype
+a = "Hello, World!"
+b = 'Python Programming'
+c = '''This is a multi-line
+string in Python.'''
+
+--> When we want to use single quotes insisde some text in a string in that ase we have to use double quotes and vice versa.
+Ex:- a= "hello from men's shiop"
+
+--> If you want to use both double and single quotes in a single line string then we have to use triple quotes.
+Ex:- a= '''he said "it's a nice day"'''
+
+
+Indexing in string datatype,
+===========================
+
+Indexing in python meana the position of charecter in a string.
+
+x; a =sharan
+    index: 012345
+--> In python indexing starts from 0. and it alos suppports negative indexing.
+
+    Negative indexing starts from -1.
+    x; a =sharan
+        index: -6-5-4-3-2-1     
+--> We can access the charecters in a string using indexing.
+Ex:- a = "sharan"
+     print(a[0])   # Output: s
+     print(a[-1])  # Output: n  
+
+
+
+-
+--->
+
+Slice operator
+================
+
+If we want in a string that in slice manner means a part of string to be printed we use slice operator.
+
+Ex: a= 'sharankumar'
+print(a[0:3]) = o/p -- sha
+print(a[ :3])= o/p -- sha
+printa([4:]) = o/p -- ankumar
+
+
+
+--> Q = convert fiorst and last letter of the above sting into caps
+
+---A = 'sharankumar'
+output = a[0].upper()+a[1:len(a)-1]+a[len(a)-1].upper()
+print(output) 
+
+
++ and * operator for str datatype.
+========================================
+If 2 strings are +d then string will concatinate
+If 2 string are *d then , error
+If one int and another string tghem string multiplied by int times.
+
+
+Typecasting
+================
+
+Typecasting in python is convert one type of data type to another type.
+ 
+ There are five 5 in built type functions in python.
+
+viz, int(), float(), str(), bool(), complex().
+
+Ex:- 
+# int to string
+a = 10
+b = str(a)
+print(b)        # Output: '10'
+print(type(b))  # Output: <class 'str'>
+
+# float to string
+pi = 3.14
+s = str(pi)
+print(s)        # '3.14'
+
+# bool to string
+flag = True
+s2 = str(flag)
+print(s2)       # 'True'
+
+# list to string
+lst = [1, 2, 3]
+s3 = str(lst)
+print(s3)       # '[1, 2, 3]'
+
+
+
+Immutability
+===========
+
+Immutaility in python means, the object stored in a variable cannot be changed. 
+When try to change the python creates new object in the memory instaed of chnaging original one.
+
+All fundamnetal datatypes are immutable in nature
+ie, int bool, float complex and str
+
+--> This way it enhances the memory management and perfomance of program
+
+
+Mutable datatype
+====================
+In python, mutable data type means if you change the value of var then no new object will create instaed the vlaue of origin var will modify and keeps the same id of origin object/var.
+ 
+Ex:- list, dict, srt
+
+
+========================================================================================================================================================================================
+
+Now if we have more than one value in variable, then those comes under collection related datatype.
+Such are:
+list
+dict
+tuple
+set
+bytes
+bytesarray
+frozenset
+range
+
+
+
+
+list
+=====
+=====
+when you want store multiple values in a vai or object then we use list datatype.
+
+Properties:
+-[ ], this braacket is used
+    Ex:- a=[1,2,3,4,5]
+
+-duplicate values are allowed.
+    Ex:- a=[1,'sharan',10.5,1]
+
+-indexing and slicing conecept is allowed
+    Ex:- a=[1,2,3,4,5,6,7,8]
+         print(a[2:4])
+
+-Heterogeneous is allowed.
+    Ex:- Muti datatypes are allowed such as int str float
+     a=[1,'sharan',10.5,1]
+
+-Order is preserved
+-Growable
+
+    Ex:- at first you can create a empty list and later add alues to it using append module and makeit grow and later you can remove values form by remove module.
+        Ex:- a=[]
+a.append(10)
+a.append(20)
+a.append(30)
+a.append(40)
+a.append(50)
+a.remove
+print(a)
+
+tuple
+============
+the knd of datatype which is immutable in nature and used to store multiple values in var.
+and all propereties are mostly same as list but mutanilyty is duff in nature and it is represeted by () this braces.
+
+note---> sinlge valued tuple should ends with comma, otherwkse pvm thinks it as int and give type as int
+
+ie. a=(10,) =  is rhe expected tuple format for single value tuple
+
+set datatype
+=============
+when our requirement is to stoire data where 
+-order is not expected
+-dupicate not allowed 
+-slicing and ic=ndexing not alowed 
+-can add heterogenous objects
+-it is mutable in nature? Growable in nature.
+to add values we add() method where we used append() method in list datatype
+ a={1,2,3,4}
+a.add(5)
+print(a) = o/p== {1,2,3,4,5}
+
+
+

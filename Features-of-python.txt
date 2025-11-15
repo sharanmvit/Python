@@ -1,0 +1,76 @@
+Featurs of python
+=================
+
+1) Simple and easy to use.
+
+    -> The language is simle and easy to understand and use. It requires less lines of codes and can be written in less time compare to other languages.
+
+2) Freeware and opensource.
+
+    -> Freeware = This means, to use this lang at any level ex-business or personal level one need not to pay anyone. It is free of cost.
+    -> Opoen source = This means, the source code of python is availble openly and anyone can get it and customise it accrodingly as thier requirement.
+
+3) High level programming language.
+
+    -> This means, it is very programmer freindly language and I need not to worry about the low level work ie garbage collector, converting byte code to machine language and all.
+
+4) Platform independent.
+
+    -> This means, we don't need to write diff python application for each OS platform as it required in C. 
+        We just need to write once and run many times. But we just need PVM (Python virtaul machine) which is responsible for making python platform independent.
+        The once cathch here is though python is platform indepenent, PVM is platform dependenden.
+
+5) Portability.
+    -> This means, if your application running on windows OS and for some reason you want to migrate to linux or any other OS in that case you don't need to change anthing in the application, you can easily port it to other platform.
+
+6) Dynamically type language.
+    -> This means, in python we don't need to declare the type of variable while assigning the value, language will understand by itself and we can the value of that variable dynamically during runtime.
+
+7) Multi purpose oriented.
+    -> This means, pythin has the facility that used be used for 
+        --Procidure oriented
+        --OOP
+        --Scripting
+        --Modular programming
+
+8) Interpreted.
+    -> This means, in python w don't need to compile program to run like other lang. Interpreter in the PVM will do it for us. It compiles line by line and gives syntax error while programming and only after all syntax checks are done then only PVM starts excecuting the code.
+
+9) Extensible.
+    -> This means, in python we can use other language if required. Ex: If suppose in our python application in some area perfomance is essential and need the program to be written in C and we can write that part of sction in C and intergrate with python and run it.
+    This way the funcationality will increase and more flexibility and time saved to write a program.
+
+10) Embedded.
+    -> This means, in any other language's application if we want some python script or code to be write, we can do it easily. Python has that facility and by this way scope of python will increase.
+    Ex:- Jython, CPython
+
+11) Rich library.
+    -> This means, python has very rich ready made librarie/modules from which we can import functions and use them for our usecases.
+    The work that takes 20 lines in other mang, in python we can use in just 2-3 lines
+    Ex: Generate 6 digit otp
+     FOr this we use module callled random and import randint fun and use to generate 6-diogit otp
+     ie:
+
+     from random import randint
+     print (randint(0,9),randint(0,9),randint(0,9),randint(0,9),randint(0,9),randint(0,9),sep='')
+
+Limiations of Python
+====================
+
+-> Not suitable for mobile applications
+-> Not suitable for enterprise level apps.
+    Ex:- Banking, Telecom , hospital etc.
+-> not suitable for perfomance oriented apps.
+
+
+Flavours of Python
+==================
+    Cpython
+    Jpython 
+    Iron python
+    ruby python
+    stack python
+    pypy
+    anaconda python
+    stackless python..etc
+
