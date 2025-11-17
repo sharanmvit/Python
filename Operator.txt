@@ -1,0 +1,331 @@
+Operator:-
+=============
+Operators are special symbols used to perform operations on variables and values.
+
+Operators in Python
+=============================
+Arithmetic Operators
+Relational / Comparison Operators
+Logical Operators
+Assignment Operators
+Bitwise Operators
+Membership Operators
+Identity Operators
+Ternary Operator
+
+Relational / Comparison Operators
+===========================
+Relational / Comparison Operators in Python
+
+==
+!=
+>
+<
+>=
+
+Relational / Comparison Operators in Python
+=================================================
+1. == (Equal to)
+
+Checks if two values are equal.
+
+print(5 == 5)      # True
+print(5 == 3)      # False
+
+2. != (Not equal to)
+
+Checks if two values are not equal.
+
+print(5 != 3)      # True
+print(5 != 5)      # False
+
+3. > (Greater than)
+
+Left value is greater than right.
+
+print(7 > 4)       # True
+print(2 > 8)       # False
+
+4. < (Less than)
+
+Left value is smaller than right.
+
+print(3 < 9)       # True
+print(10 < 2)      # False
+
+5. >= (Greater than or equal to)
+
+Left value is greater than or equal to right.
+
+print(5 >= 5)      # True
+print(7 >= 8)      # False
+
+6. <= (Less than or equal to)
+
+Left value is less than or equal to right.
+
+print(4 <= 6)      # True
+print(9 <= 2)      # False
+
+
+Arithmetic Operators in Python
+========================================
+
+1. + (Addition)
+
+Adds two numbers.
+
+print(10 + 5)   # 15
+
+2. - (Subtraction)
+
+Subtracts right value from left.
+
+print(10 - 3)   # 7
+
+3. * (Multiplication)
+
+Multiplies two numbers.
+
+print(4 * 5)    # 20
+
+4. / (Division)
+
+Divides left by right (always gives float).
+
+print(10 / 4)   # 2.5
+
+5. % (Modulus)
+
+Returns remainder.
+
+print(10 % 3)   # 1
+
+6. ** (Exponent)
+
+Raises left to the power of right.
+
+print(2 ** 3)   # 8
+
+7. // (Floor Division)
+
+Division but removes decimal part.
+
+print(10 // 3)  # 3
+
+
+
+Bitwise operator
+=========================
+
+& | ^ ~ << >> 
+
+& (Bitwise AND)
+
+Sets each bit to 1 if both bits are 1.
+
+print(5 & 3)
+
+
+Explanation:
+5 → 101
+3 → 011
+Result → 001 = 1
+
+2. | (Bitwise OR)
+
+Sets each bit to 1 if at least one bit is 1.
+
+print(5 | 3)
+
+
+5 → 101
+3 → 011
+Result → 111 = 7
+
+3. ^ (Bitwise XOR)
+
+Sets each bit to 1 if the bits are different.
+
+print(5 ^ 3)
+
+
+5 → 101
+3 → 011
+Result → 110 = 6
+
+4. ~ (Bitwise NOT)
+
+Flips every bit (1 → 0, 0 → 1).
+Also gives -(n + 1) in Python.
+
+print(~5)
+
+
+Output → -6
+
+Because:
+~5 = -(5 + 1)
+
+5. << (Left Shift)
+
+Shifts bits to the left → adds zeros on the right.
+Equivalent to multiplying by 2ⁿ.
+
+print(5 << 1)   # 5 * 2 = 10
+print(5 << 2)   # 5 * 4 = 20
+
+6. >> (Right Shift)
+
+Shifts bits to the right → removes bits on the right.
+Equivalent to dividing by 2ⁿ.
+
+print(5 >> 1)   # 5 / 2 = 2
+
+
+
+Asiignemnt operator:=
+===============================
+
+Operatoe used to asign any vlaue is known as assignment operator.
+Ex:a=2
+Here = is used as assignment operator
+
+Compound assignment operator:
+===================================
+a=3
+a+=2
+meas a=a+2
+like this there are many compound assignment operator we can use,
+
+a+=x
+a-=x
+a*=x
+a/=x
+....etc
+
+
+
+Ternary Operator:-
+====================
+
+If more than 2 arguments are passed to check the codition then ternary operatoe is used.
+
+Syntax:- 
+    <value> if <condition> else < value>
+
+ E:- a=20
+b=100
+c=40 if a>b else 50
+print(a)
+
+
+Small program examle:
+
+WAP to read 2 int from keyboard and print min value from them.
+
+Code:
+
+a=int(input('Enter the a value:'))
+b=int(input('Enter the b value:'))
+min=a if a<b else b
+print('Min value is: ', min)
+
+Nested ternary operator:
+=============================
+Ternanry operator inside a ternary operator"
+
+SYntax:
+WAP to read 2 int from keyboard and print min value from them.
+
+
+a=int(input('Enter the a value:'))
+b=int(input('Enter the b value:'))
+c=int(input('Enter the c value:'))
+min=a if a<b and a<c else b if b<c else c
+
+
+Another EX:
+a=int(input('Enter the a value:'))
+b=int(input('Enter the b value:'))
+result = 'Equal' if a==b else 'Smaller' if a<b else 'Bigger'
+print("A is",result,"than b")
+
+
+Special Operator:
+======================
+1) Identity operator
+2) Membership operator
+
+1) Identity operator
+======================
+We already used this as is and is not operator. We used is this where to check if content is same 
+a=10
+b=10
+print(a is b)
+o/p= True
+
+2) Membership operator
+==============================
+To check wherather this is member of that list or not. CHeck wheather this value in tnis sequence or not 
+
+For that we use in and ot in operator
+
+Membership operators are used to check whether a value exists inside a sequence (like list, tuple, string, set, dictionary).
+
+Python has two membership operators:
+
+✅ 1. in Operator
+
+Returns True if the value is present in the given sequence.
+
+Examples:
+✔ In a list
+print(5 in [1, 2, 3, 4, 5])     # True
+
+✔ In a string
+print("a" in "sharan")          # True
+
+✔ In a dictionary (checks keys)
+d = {"name": "Sharan", "age": 25}
+print("name" in d)              # True
+print("Sharan" in d)            # False   # checks key, not value
+
+✅ 2. not in Operator
+
+Returns True if the value is NOT present in the sequence.
+
+Examples:
+✔ In a list
+print(10 not in [1, 2, 3])      # True
+
+✔ In a string
+print("z" not in "sharan")      # True
+
+⭐ Summary Table
+Operator	Meaning
+in	True if value is found in sequence
+not in	True if value is NOT found in sequence
+
+Operator Precedence:
+=========================
+
+in python if you want to prioritise which operator should be excecuted/operated first then we use thismethod.
+Ex: BODMAS sequence
+Operator Precedence in Python (From Highest to Lowest)
+
+1. Parentheses: ()
+2. Exponential: **
+3. Unary Operators: +x, -x, ~x
+4. Multiplicative: *, /, //, %
+5. Additive: +, -
+6. Bitwise Shift: <<, >>
+7. Bitwise AND: &
+8. Bitwise XOR: ^
+9. Bitwise OR: |
+10. Comparison: <, <=, >, >=, ==, !=
+11. Identity & Membership: is, is not, in, not in
+12. Logical NOT: not
+13. Logical AND: and
+14. Logical OR: or
+"""
