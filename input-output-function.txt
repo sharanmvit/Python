@@ -200,3 +200,82 @@ eval("[1,2,3]")
 Output:
 
 [1, 2, 3]
+
+
+COmmand line arguemnt
+========================
+Command-line arguments are values that you pass to a Python program from the terminal (command prompt) when running the script.
+
+They allow programs to accept input without using input().
+
+Where Are They Used?
+=======================
+
+Command-line arguments are widely used in:
+
+DevOps automation
+
+Server deployment scripts
+
+Docker & Kubernetes entrypoint scripts
+
+Data processing tools
+
+Machine learning pipelines
+
+File converters, backup utilities
+
+Cron jobs
+
+Linux/Unix shell scripting
+How to Access Command-Line Arguments?
+
+Python provides a module:
+
+import sys
+
+
+All arguments are stored in a list called:
+
+sys.argv
+
+📌 Important Points:
+
+sys.argv is a list of strings.
+
+sys.argv[0] → name of the program.
+
+Remaining values are user-provided arguments.
+
+⭐ Example
+Command:
+python add.py 10 20
+
+Python Program:
+import sys
+
+a = int(sys.argv[1])
+b = int(sys.argv[2])
+
+print("Sum:", a + b)
+
+Output:
+Sum: 30
+
+=====sys.argv is a list, but the elements inside it are strings.
+
+python output function
+=======================
+=======================
+| Feature       | Example                |
+| ------------- | ---------------------- |
+| Basic print   | `print("Hello")`       |
+| sep           | `print(a, b, sep=",")` |
+| end           | `print(a, end=" ")`    |
+| f-string      | `print(f"{x}")`        |
+| format()      | `"{}".format(x)`       |
+| Raw string    | `print(r"text")`       |
+| Print to file | `print("hi", file=f)`  |
+
+
+
