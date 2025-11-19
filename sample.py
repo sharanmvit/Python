@@ -1,2 +1,2 @@
-a={'name':'sharan','age':24,'place':'kerala'}
+a=eval(input('enter something'))
 print(type(a))

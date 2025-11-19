@@ -1,0 +1,202 @@
+input and output function in python
+======================================
+======================================
+
+raw_input vs input function
+python3 input()
+how to read multiple values from keyboard in a single line
+command line arguments
+
+output statement - print()
+set attribute
+end attribute
+printing formatted string
+replacement operator{}
+
+
+input function in python
+========================
+in python3.x the input function is always takes input in the form of string and if we want that in other form we have to do type casting
+ but in python 2.x we had  diff case ie:
+ raw_input() = always str
+ input() = based on the value given by keyboard
+
+
+ ie in python 3 the o/p always is  like this;
+
+ a=input('ENter the vslue')
+ print(type(a))
+
+O/P= str (always) irrespective of value given by keyboard
+
+
+1. input() Function
+- Used to take user input from keyboard.
+- Always returns a string.
+- Syntax: variable = input("message")
+- Convert to int/float if needed.
+
+Examples:
+name = input("Enter name: ")
+age = int(input("Enter age: "))
+
+Reading multiple inputs:
+a, b = input().split()
+a, b, c = map(int, input().split())
+
+2. print() Function
+- Used to display output on screen.
+- Syntax: print(value1, value2, sep=' ', end='\\n')
+
+Important parameters:
+- sep: separator between arguments
+- end: ending character
+
+Examples:
+print(1, 2, 3, sep='-')
+print("Hello", end=" ")
+
+Formatting Output:
+- f-strings: print(f"Name: {name}")
+- format(): print("Name: {}, Age: {}".format(name, age))
+
+3. Differences
+input(): takes input, returns string.
+print(): displays output.
+
+4. Common Mistakes
+a = input()
+b = input()
+print(a + b)  # string concatenation
+
+Correct:
+print(int(a) + int(b))
+
+5. Useful Shortcuts
+nums = list(map(int, input().split()))
+a, b = map(float, input().split())
+"""
+
+story.append(Paragraph(text.replace("\n","<br/>"), styles['Normal']))
+doc = SimpleDocTemplate(filename, pagesize=letter)
+doc.build(story)
+
+filename
+
+Analyzed
+python
+Always show details
+
+Copy code
+from reportlab.platypus import SimpleDocTemplate, Paragraph
+from reportlab.lib.styles import getSampleStyleSheet
+
+doc = SimpleDocTemplate("/mnt/data/python_input_output_notes.pdf")
+styles = getSampleStyleSheet()
+story = []
+
+text = """
+**Notes on Input and Output Functions in Python**
+
+**1. Input Function (`input()`)**
+- Used to take input from the user.
+- Always returns data as a **string**.
+- Syntax: `variable = input("Enter something: ")`
+- To convert input to other data types, use functions like `int()`, `float()`, etc.
+
+**Examples:**
+`name = input("Enter your name: ")`
+`age = int(input("Enter your age: "))`
+
+---
+
+**2. Output Function (`print()`)**
+- Used to display output on the screen.
+- Can print strings, variables, expressions, etc.
+- Supports multiple arguments separated by commas.
+
+**Examples:**
+`print("Hello")`
+`print("Sum is:", a + b)`
+
+---
+
+**3. Optional Parameters in `print()`**
+- `sep`: Defines separator between printed items.
+- `end`: Defines what to print at the end of the line (default is newline `\\n`).
+
+**Examples:**
+`print("A", "B", "C", sep="-")`
+`print("Hello", end=" ")`
+
+---
+
+**4. Formatting Output**
+- Using f-strings (recommended): `print(f"Value is {x}")`
+- Using `format()`: `print("Value is {}".format(x))`
+
+---
+
+**5. Reading Multiple Values**
+- Using `split()` method.
+Example:
+`a, b, c = input("Enter three numbers separated by space: ").split()`
+
+For numeric conversion:
+`a, b, c = map(int, input("Enter three numbers: ").split())`
+
+These functions together allow user interaction in Python programs.
+"""
+
+eval() functiom
+===============
+evalv function in python is used when to check the type of data used in input funcation 
+ie whatevee type of data used in input funcation, want to read that data then tbis fun is used
+
+ex:
+a=eval(input('enter something))
+
+What is eval()?
+
+eval() is a built-in Python function that takes a string, interprets it as a Python expression, and evaluates it.
+
+Syntax
+eval(expression, globals=None, locals=None)
+
+🔹 Key Features
+1. Evaluates expressions written as strings
+
+Example:
+
+eval("10 + 20")
+
+
+Output:
+
+30
+
+2. Converts strings to Python expressions
+x = 5
+eval("x * 10")   # Uses value of x
+
+
+Output:
+
+50
+
+3. Works with mathematical functions (if imported)
+import math
+eval("math.sqrt(25)")
+
+
+Output:
+
+5.0
+
+4. Can evaluate list, tuple, dict, set expressions
+eval("[1,2,3]")
+
+
+Output:
+
+[1, 2, 3]
