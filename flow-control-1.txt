@@ -1,0 +1,98 @@
+In python we have 3 typoe of statement used to control flow.
+
+1) Selection statement
+    if
+    if-else
+    if-elif
+    if-elif-else
+2) Iterative statement
+    for
+    while
+3) Transfter statement
+    break
+    continue
+
+if statement
+============
+ to write a if conditioned statement 2 most imp thing to consider is start with : and use indentation to write statements. ie
+
+ if condtion:
+    statement1
+    statement2
+    statement3
+statement4   # tbis means the statement is not a part of if condition.
+
+How does if statement works is if the given conditon after if satisfies then the statments below works fine if not then it will comes out of if and excecutes next statemnts
+
+
+ex:
+name=input('enter the name:')
+if name=='sharan':
+    print('welcome')
+
+if-else
+============
+if <condition>:
+    action-1
+    action-2
+
+else :
+    actions
+
+Ex:
+name=input('enter the name:')
+if name=='sharan':
+    print('welcome sharan')
+else:
+    print('hello guest')
+
+print('how are you')  
+
+
+if-elif-else
+=============
+name = input('enter name: ')
+if name=='sharan':
+    print('good sharan')
+elif name=='siddu':
+    print('good siddu')
+elif name=='raj':
+    print('good raj')
+else:
+    print('no good name')
+
+
+if-elif
+===========
+from anove ex we can eliminate else then it behave as same as above
+
+
+WAP to find biggest of 2 no from keyboard:
+
+a=input('enter the value of a: ')
+b=input('enter the value of b: ')
+if a>b:
+    print('a is bigger')
+else:
+    print('b is boigger')
+
+
+WAP to find biggest of 2 no from keyboard:
+------------------------------------------
+    a=input('enter the value of a: ')
+b=input('enter the value of b: ')
+c=input('enter the value of c: ')
+if a>b and a>c:
+    print('a is bigger')
+elif b>c:
+    print('b is boigger')
+else:
+    print('c is bigger')
+
+
+Iterative statement:
+====================
+====================
+If you want to repeat certian statment multiple times then we use iterative statemnt, such are as below
+
+for and while loop
