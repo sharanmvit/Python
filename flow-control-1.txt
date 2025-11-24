@@ -109,4 +109,684 @@ for x in s:
     print(x)
 means--for every value present in x print the every value of x 
 
+FOR LOOP — NOTES (Python)
+1. What is a for loop?
+
+A for loop is used to repeat a block of code for each item in a sequence (like a string, list, tuple) or for a range of numbers.
+
+It is mainly used when the number of iterations is known.
+
+2. Syntax
+for variable in sequence:
+    statement(s)
+
+3. Using range() in a for loop
+
+range() generates a sequence of numbers.
+
+Examples:
+
+range(5) → 0,1,2,3,4
+
+range(1,6) → 1,2,3,4,5
+
+range(1,10,2) → 1,3,5,7,9 (step = 2)
+
+Example:
+
+for i in range(1,6):
+    print(i)
+
+4. Looping through a String
+for ch in "Python":
+    print(ch)
+
+
+This prints each character one by one.
+
+5. Looping through a List
+numbers = [10, 20, 30]
+for n in numbers:
+    print(n)
+
+6. Using break inside for loop
+
+Stops the loop immediately.
+
+for i in range(10):
+    if i == 5:
+        break
+    print(i)
+
+7. Using continue inside for loop
+
+Skips the current iteration.
+
+for i in range(5):
+    if i == 2:
+        continue
+    print(i)
+
+8. Using else with for loop
+
+else executes only if the loop finishes normally (not stopped by break).
+
+for i in range(3):
+    print(i)
+else:
+    print("Loop completed")
+
+9. Nested for loop
+
+A loop inside another loop.
+
+for i in range(3):
+    for j in range(2):
+        print(i, j)
+
+10. Common Examples
+a) Print numbers 1 to 10
+for i in range(1,11):
+    print(i)
+
+b) Print even numbers
+for i in range(2,21,2):
+    print(i)
+
+c) Print characters with index
+name = "Sharan"
+for i in range(len(name)):
+    print(i, name[i])
+
+while loop
+==========
+==========
+while loop excecute the code as long as the given condtion is true, once the given condition false it will break the loop.
+
+this is used when no of iterations are not known in the intail.
+
+syntax:
+while condition:
+    statements
+
+i = 1
+while i <= 5:
+    print(i)
+    i += 1
+Outout= 1 2 3 4 5
+
+
+
+Use While Loop When:
+
+Number of iterations unknown
+
+Repeatedly checking something
+
+Waiting for user input
+
+Running until a condition changes
+
+Continuous systems (game loop, server monitoring)
+
+
+
+
+netsed loop
+==========
+==========
+
+a loop inside a loop is known as nested loop.
+
+--the outer loop runs first
+--for each iteration of outerloop the inner loop runs completely.
+
+Used in :
+matrices
+tbles
+patterns
+machine level ops
+etc
+
+
+Syntax:
+for outer in range(x):
+    for inner in range(y):
+        statements
+
+
+for i in range(3):
+    for j in range(2):
+        print(i, j)
+O/P:
+0 0
+0 1
+1 0
+1 1
+2 0
+2 1
+
+
+break
+=====
+=====
+break statment is used to stop the loop immedietely even if the loop condition is true.
+
+ususlly used inside for, while and nested loop.
+
+Why do we use break?
+
+To stop a loop when a certain condition is met, such as:
+
+Finding an item
+
+Exiting early
+
+Stopping on error
+
+Limiting iterations
+
+for i in range(1, 11):
+    if i == 5:
+        break
+    print(i)
+
+1
+2
+3
+4
+Loop stops when i == 5.
+
+
+continue
+======
+======
+
+What is continue statement?
+
+The continue statement is used to skip the current iteration of a loop and move directly to the next iteration.
+
+It does not stop the loop; it only skips one cycle.
+
+2. Syntax
+continue
+
+
+Used inside:
+
+for loops
+
+while loops
+
+3. Why do we use continue?
+
+To skip:
+
+unwanted values
+
+specific conditions
+
+invalid inputs
+
+certain steps
+
+Useful when you want the loop to keep running, but ignore some cases.
+
+Examples
+Example 1 — Skip number 3
+for i in range(1, 6):
+    if i == 3:
+        continue
+    print(i)
+
+Output:
+1
+2
+4
+5
+
+
+ When i == 3, the loop skips printing and jumps to next iteration.
+
+Example 2 — Print only even numbers
+for i in range(1, 11):
+    if i % 2 != 0:
+        continue
+    print(i)
+
+Output:
+2
+4
+6
+8
+10
+
+Example 3 — Skip empty inputs (real-world example)
+names = ["Sharan", "", "Kumar", "", "Mbit"]
+
+for n in names:
+    if n == "":
+        continue
+    print(n)
+
+
+Skips blank entries.
+
+Continue in While Loop
+i = 0
+while i < 5:
+    i += 1
+    if i == 3:
+        continue
+    print(i)
+
+Output:
+1
+2
+4
+5
+
+Difference Between break and continue
+break	continue
+Stops the loop completely	Skips only current iteration
+Moves control outside loop	Moves control to next iteration
+Ends execution of loop	Loop continues to run
+⭐ Summary (Easy to Remember)
+
+continue = skip & continue
+break = stop & exit
+
+
+BREAK in Nested Loops
+
+When break is used inside a nested loop:
+
+👉 It exits only the inner loop,
+👉 NOT the outer loop.
+
+Example 1 — Break inside inner loop
+for i in range(1, 4):         # Outer loop
+    for j in range(1, 6):     # Inner loop
+        if j == 3:
+            break
+        print(i, j)
+
+Output:
+1 1
+1 2
+2 1
+2 2
+3 1
+3 2
+
+
+✔ Inner loop stops when j == 3
+✔ Outer loop continues to next i
+
+Example 2 — Break outer loop using a flag
+stop = False
+
+for i in range(1, 4):
+    for j in range(1, 6):
+        if j == 3:
+            stop = True
+            break
+        print(i, j)
+    if stop:
+        break
+
+
+✔ This breaks both loops.
+
+📘 CONTINUE in Nested Loops
+
+continue works only inside the loop where it appears.
+
+👉 It skips that iteration of the inner loop.
+👉 Then inner loop continues normally.
+👉 Outer loop is not affected.
+
+Example 3 — Continue inside inner loop
+for i in range(1, 4):          # Outer loop
+    for j in range(1, 6):      # Inner loop
+        if j == 3:
+            continue
+        print(i, j)
+
+Output:
+1 1
+1 2
+1 4
+1 5
+2 1
+2 2
+2 4
+2 5
+3 1
+3 2
+3 4
+3 5
+
+
+✔ j == 3 is skipped
+✔ Other values continue normally
+
+📘 Continue inside outer loop
+for i in range(1, 4):
+    if i == 2:
+        continue
+    for j in range(1, 4):
+        print(i, j)
+
+Output:
+1 1
+1 2
+1 3
+3 1
+3 2
+3 3
+
+
+✔ Entire second row is skipped because i == 2
+
+⭐ Summary Table
+Situation	break	continue
+Inside inner loop	Exits only inner loop	Skips inner loop iteration
+Inside outer loop	Stops outer loop	Skips entire outer iteration
+Stops loops	Yes (only where used)	No
+Skips values	No	Ye
+
+
+
+loop with else block
+====================
+python allows else block at the end of for /while loop
+ this else exceutes only if the loop exits normally ie without any break keyword.
+ Else runs when:
+
+Loop finishes all iterations
+
+Condition in while loop becomes false
+
+No break was executed
+
+🔹 Else does NOT run when:
+
+Loop is exited using a break statement
+
+<b>Loops with else Block in Python — Notes</b>
+
+1. The else block runs only if the loop completes normally without a break.
+
+2. When else runs:
+   • Loop finishes all iterations (for)
+   • Condition becomes false (while)
+   • No break encountered
+
+3. When else does not run:
+   • Loop is exited using break
+
+----------------------------------------------
+
+<b>For Loop with Else</b>
+for i in range(5):
+    print(i)
+else:
+    print("Loop completed")
+
+Output:
+0 1 2 3 4
+Loop completed
+
+----------------------------------------------
+
+<b>For Loop with Break (Else Skipped)</b>
+for i in range(5):
+    if i == 3:
+        break
+    print(i)
+else:
+    print("This will not run")
+
+Output:
+0 1 2
+
+----------------------------------------------
+
+<b>While Loop with Else</b>
+count = 1
+while count <= 3:
+    print(count)
+    count += 1
+else:
+    print("While loop ended")
+
+----------------------------------------------
+
+<b>Real Example: Searching</b>
+items = ["pen", "book", "bag", "mouse"]
+
+for item in items:
+    if item == "bag":
+        print("Bag found!")
+        break
+else:
+    print("Bag not found")
+
+----------------------------------------------
+
+<b>Summary</b>
+• else runs only when loop completes normally  
+• break prevents else  
+• Useful for searching, validation, and checking conditions
+"""
+
+for paragraph in text.split("\n\n"):
+    story.append(Paragraph(paragraph, styles['Normal']))
+    story.append(Spacer(1, 12))
+
+SimpleDocTemplate(filename, pagesize=A4).build(story)
+
+filename
+
+Analyzed
+python
+Always show details
+
+Copy code
+from reportlab.platypus import SimpleDocTemplate, Paragraph, Spacer
+from reportlab.lib.styles import getSampleStyleSheet
+from reportlab.lib.pagesizes import A4
+
+filename = "/mnt/data/loops_with_else_notes.pdf"
+
+styles = getSampleStyleSheet()
+story = []
+
+text = """
+<b>Loops with else Block in Python — Notes</b>
+
+1. The else block runs only if the loop completes normally without a break.
+
+2. When else runs:
+   • Loop finishes all iterations (for)
+   • Condition becomes false (while)
+   • No break encountered
+
+3. When else does not run:
+   • Loop is exited using break
+
+----------------------------------------------
+
+<b>For Loop with Else</b>
+for i in range(5):
+    print(i)
+else:
+    print("Loop completed")
+
+----------------------------------------------
+
+<b>For Loop with Break (Else Skipped)</b>
+for i in range(5):
+    if i == 3:
+        break
+    print(i)
+else:
+    print("This will not run")
+
+----------------------------------------------
+
+<b>While Loop with Else</b>
+count = 1
+while count <= 3:
+    print(count)
+    count += 1
+else:
+    print("While loop ended")
+
+----------------------------------------------
+
+<b>Real Example: Searching</b>
+items = ["pen", "book", "bag", "mouse"]
+
+for item in items:
+    if item == "bag":
+        print("Bag found!")
+        break
+else:
+    print("Bag not found")
+
+----------------------------------------------
+
+<b>Summary</b>
+• else runs only when loop completes normally  
+• break prevents else  
+• Useful for searching, validation, and checking conditions
+"""
+
+
+pass statement
+=============
+we use pass statment in python to just hold a place. means we use that place in future if required.
+
+If we use pass statment inside any function or class even if there is no code it will accept the syntax.
+
+Examples:
+1)class Student:
+    pass
+
+2) def my_function():
+    pass
+etc
+
+When should we use pass?
+
+When writing code later (placeholder)
+While defining an empty function
+While defining an empty class
+When creating minimal code structure
+When you want to temporarily disable a block
+
+
+del
+===
+===
+What is del?
+
+del (delete) is a Python statement used to delete objects, such as:
+
+variables
+
+list items
+
+dictionary keys
+
+slices
+
+entire objects
+
+It removes the reference to the object from memory.
+
+📌 1. Deleting a Variable
+x = 10
+del x
+print(x)   # Error: x is not defined
+
+
+✔ x is removed from memory.
+
+📌 2. Deleting an Item from a List
+numbers = [10, 20, 30, 40]
+del numbers[1]
+print(numbers)
+
+Output:
+[10, 30, 40]
+
+
+✔ Element at index 1 (20) is deleted.
+
+📌 3. Deleting a Slice from a List
+nums = [1, 2, 3, 4, 5]
+del nums[1:4]
+print(nums)
+
+Output:
+[1, 5]
+
+
+✔ Removes index 1 to 3.
+
+📌 4. Deleting Dictionary Key
+student = {"name": "Rahul", "age": 21}
+del student["age"]
+print(student)
+
+Output:
+{"name": "Rahul"}
+
+
+✔ Key "age" is removed.
+
+📌 5. Deleting an Object / Attribute
+class Car:
+    color = "Red"
+
+del Car.color
+
+
+✔ Deletes class attribute.
+
+📌 6. Deleting Multiple Variables
+a, b, c = 1, 2, 3
+del a, b
+print(c)
+
+
+✔ Deletes a and b.
+
+🛑 Important Notes
+
+After deleting a variable, using it causes NameError.
+
+del removes references, but actual memory cleanup happens by Python’s Garbage Collector.
+
+You cannot delete built-in types or keywords.
+
+| Operation             | Example           |
+| --------------------- | ----------------- |
+| Delete variable       | `del x`           |
+| Delete list item      | `del list[2]`     |
+| Delete slice          | `del list[1:4]`   |
+| Delete dictionary key | `del dict["key"]` |
+| Delete multiple vars  | `del a, b`        |
+
+| Situation                 | Why use `del`?          |
+| ------------------------- | ----------------------- |
+| Temporary data not needed | Clean program           |
+| Remove list/dict items    | Manage data             |
+| Free memory               | Speed & efficiency      |
+| Clean corrupted records   | Data preprocessing      |
+| Clear session or cache    | Security & optimization |
+
 
