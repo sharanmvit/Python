@@ -96,3 +96,17 @@ Iterative statement:
 If you want to repeat certian statment multiple times then we use iterative statemnt, such are as below
 
 for and while loop
+
+for
+===
+===
+if you want every value in side a varibale ie single va;ue of list pr tuple etc to be used repeatedly in increment manner then use for loop
+
+syntax:
+
+s='sharan'
+for x in s:
+    print(x)
+means--for every value present in x print the every value of x 
+
+
