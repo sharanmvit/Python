@@ -1,0 +1,78 @@
+String
+======
+set of char represented in in python is known as string
+represemnted by '', "", ''' ''', """ """.
+Eg:
+s = 'sharan'
+s = "sharan"
+
+Multiline string:
+--------------
+Eg:
+>>> s = '''sharan 
+mvit
+pythion'''
+
+1) s = 'This is ' single quote symbol'  Invalid
+2) s = 'This is \' single quote symbol'  Valid
+3) s = "This is ' single quote symbol"  Valid
+4) s = 'This is " double quotes symbol'  Valid
+
+How to access charecters of string
+1) using index
+2) using slice operator
+
+1) using index
+-------------
+ Python supports both +ve and -ve Index.
+ +ve Index means Left to Right (Forward Direction)
+ -ve Index means Right to Left (Backward Direction)
+ Eg: s = 'sharan'
+1) >>> s='sharan'
+2) >>> s[0]
+3) 's'
+4) >>> s[4]
+5) 'a'
+6) >>> s[-1]
+7) 'n'
+8) >>> s[10]
+9) IndexError: string index out of range 
+
+Q) Write a Program to Accept some String from the Keyboard and display its char at +ve and -ve indices
+
+s=(input('enter some string: '))
+i=0
+for a in s:
+    print('The char present at +ve index:{} and -ve index:{} is {}'.format(i, (i-len(s)), a))
+    i=i+1
+
+
+2)Accessing Characters by using Slice Operator
+---------------------------------------------
+ Syntax: s[bEginindex:endindex:step]
+ Begin Index: From where we have to consider slice (substring)
+ End Index: We have to terminate the slice (substring) at endindex-1
+ Step: Incremented Value.
+Note:
+ If we are not specifying bEgin index then it will consider from bEginning of the string.
+ If we are not specifying end index then it will consider up to end of the string.
+ The default value for step is 1.
+
+1) >>> s="Learning Python is very very easy!!!"
+2) >>> s[1:7:1]
+3) 'earnin'
+4) >>> s[1:7]
+5) 'earnin'
+6) >>> s[1:7:2]
+7) 'eri'
+8) >>> s[:7]
+9) 'Learnin'
+10) >>> s[7:]
+11) 'g Python is very very easy!!!'
+12) >>> s[::]
+13) 'Learning Python is very very easy!!!'
+14) >>> s[:]
+15) 'Learning Python is very very easy!!!'
+16) >>> s[::-1]
+17) '!!!ysae yrev yrev si nohtyP gninraeL' 
+ 
